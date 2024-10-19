@@ -1,0 +1,71 @@
+body {
+    background-color: #181818;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+    transition: background-color 2.0s ease;
+  }
+  
+  .top.flex {
+    background-color: #172c6e;
+    transition: background-color 2.0s ease;
+  }
+  
+  a.button:nth-child(4) {
+    background-color: #50a550;
+  }
+  
+  a.button:nth-child(4):hover {
+    background-color: #236d23;
+  }
+  
+  .container {
+    flex-grow: 1;
+  }
+  
+  .custom-footer {
+    text-align: center;
+    padding: 10px 0;
+    color: #888;
+  }
+  
+  .custom-footer a {
+    color: #aaa;
+    text-decoration: none;
+  }
+  
+  .custom-footer a:hover {
+    color: #fff;
+  }
+  
+  .theme-toggle {
+    display: block;
+    margin: 20px auto;
+    padding: 10px 20px;
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 16px;
+    color: white;
+    background-color: #6e6e6e;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 2.0s ease;
+  }
+  
+  .theme-toggle:hover {
+    background-color: #555;
+  }
+  
+  .light-theme {
+    background-color: #f2f2f2;
+  }
+  
+  .light-theme .top.flex {
+    background-color: #2266cc;
+  }
+  
+  .light-theme .theme-toggle {
+    color: #f2f2f2;
+  }
+  
