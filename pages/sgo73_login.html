@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Сетевой Город. Образование</title>
+  <link href="https://fonts.googleapis.com/css?family=Ubuntu:300,400,500&amp;subset=cyrillic" rel="stylesheet">
+  <link rel="stylesheet" href="https://sgo.cit73.ru/extras/css/esia_smr.css"> 
+  <style>
+    body {
+      background-color: #181818;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+      margin: 0;
+      transition: background-color 2.0s ease;
+    }
+    .top.flex {
+      background-color: #172c6e;
+      transition: background-color 2.0s ease;
+    }
+    a.button:nth-child(4) {
+        background-color: #50a550;
+    }
+    a.button:nth-child(4):hover {
+        background-color: #236d23;
+    }
+    .container {
+      flex-grow: 1;
+    }
+    .custom-footer {
+      text-align: center;
+      padding: 10px 0;
+      color: #888;
+    }
+    .custom-footer a {
+      color: #aaa;
+      text-decoration: none;
+    }
+    .custom-footer a:hover {
+      color: #fff;
+    }
+    .theme-toggle {
+      display: block;
+      margin: 20px auto;
+      padding: 10px 20px;
+      font-family: 'Ubuntu', sans-serif;
+      font-size: 16px;
+      color: white;
+      background-color: #6e6e6e;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 2.0s ease;
+    }
+    .theme-toggle:hover {
+      background-color: #555;
+    }
+    .light-theme {
+      background-color: #f2f2f2;
+    }
+    .light-theme .top.flex {
+      background-color: #2266cc;
+    }
+    .light-theme .theme-toggle {
+      color: #f2f2f2; 
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="content">
+      <div class="top flex">
+        <a href="http://www.ir-tech.ru/?products=ais-setevoj-gorod-obrazovanie" target="_blank" class="sgo"></a>
+        <div><span>Сетевой Город. </span><span>Образование</span></div>
+      </div>
+      <div class="logo"></div>
+      <div class="header">Войти в ГИС "Образование Ульяновской области"</div>
+      <div class="button">
+        <a class="button" href="/webapi/sso/esia/login?esia_permissions=1&amp;esia_role=2">Вход для родителей</a>
+        <a class="button" href="/webapi/sso/esia/login?esia_permissions=1&amp;esia_role=1">Вход для учащихся</a>
+        <a class="button" href="/webapi/sso/esia/login?esia_role=3">Вход для сотрудников</a>
+        <a class="button" href="https://sgo.cit73.ru/authorize/login">Альтернативный вход</a> </div>
+      <div class="text">
+        <div class="alter">
+          Вы получаете государственные (муниципальные) услуги в сфере<br>образования Ульяновской области в электронной форме.
+        </div>
+        <div class="mfc">Для входа необходима подтвержденная учетная запись госуслуг.<br>
+          Ее можно оформить в <a href="https://esia.gosuslugi.ru/public/ra?fts=reg" target="_blank">ближайшем</a> центре обслуживания пользователей.
+        </div>
+      </div>
+    </div>
+  </div>
+  <button class="theme-toggle">Осветить</button> 
+  <div class="custom-footer">
+    Redesigned by <a href="https://github.com/RGB-Outl4w" target="_blank">OutlawRGB</a>
+  </div>
+
+  <script>
+    const body = document.querySelector('body');
+    const themeToggle = document.querySelector('.theme-toggle');
+
+    themeToggle.addEventListener('click', () => {
+      body.classList.toggle('light-theme'); 
+
+      if (body.classList.contains('light-theme')) {
+        themeToggle.textContent = 'Затемнить';
+      } else {
+        themeToggle.textContent = 'Осветить';
+      }
+    });
+  </script>
+</body>
+</html>
